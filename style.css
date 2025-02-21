@@ -2,10 +2,12 @@
     font-family: "F1";
     src: url(font/Anton-Regular.ttf);
 }
+
 @font-face {
     font-family: "F2";
     src: url(font/Poppins-Regular.ttf);
 }
+
 @font-face {
     font-family: "F3";
     src: url(font/LemonJellyPersonalUse-dEqR.ttf);
@@ -18,10 +20,10 @@
 }
 
 body {
-    font-family: "F2", sans-serif;
-    background: linear-gradient(135deg, #121b22, #1a2a33);
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a2a33, #131d24);
     color: #e0e0e0;
-    line-height: 1.8;
+    line-height: 1.6;
     min-height: 100vh;
 }
 
@@ -40,84 +42,151 @@ header {
 
 header p {
     font-size: 32px;
-    font-weight: 600;
+    font-weight: 100;
     color: #18df64;
-    font-family: "F3", cursive;
+    font-family: F3;
 }
 
 /* Navigation */
 nav ul {
     list-style: none;
     display: flex;
-    gap: 24px;
+    justify-content: flex-end;
+    gap: 32px;
 }
 
 nav ul li a {
-    color: #e0e0e0;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+    padding: 8px 16px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background: #18df64;
-    color: #121b22;
-    transform: scale(1.05);
+    background-color: #18df64;
+    color: #131d24;
+    border-radius: 5px;
 }
 
-/* Main Section */
+/* Section Styling */
 section {
-    padding: 60px 5%;
-    max-width: 1000px;
-    margin: auto;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
 }
 
 h1 {
     color: #18df64;
-    font-size: 50px;
+    font-size: 48px;
     margin-bottom: 24px;
-    font-family: "F1", sans-serif;
-    text-shadow: 2px 2px 10px rgba(24, 223, 100, 0.5);
+    font-family: F1;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* About Section */
 .about-section {
-    text-align: left;
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Profile Picture */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #18df64;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
 }
 
 .about-section p {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 20px;
-    opacity: 0.9;
 }
 
-/* Gallery Section */
+/* Hobbies Section */
+.hobbies-section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.hobbies-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.hobbies-section li {
+    font-size: 22px;
+    color: #18df64;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.hobbies-section p {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Gallery */
 .gallery-section {
     text-align: center;
-    padding: 40px 5%;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 20px;
-    justify-content: center;
+    margin-top: 20px;
 }
 
 .gallery-img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
 }
 
 .gallery-img:hover {
     transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #131d24;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 16px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 0;
+    letter-spacing: 0.5px;
 }
 
 /* Responsive Design */
@@ -127,24 +196,21 @@ h1 {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     .gallery {
         grid-template-columns: 1fr;
     }
-}
 
-/* Footer */
-footer {
-    background: #131d24;
-    color: #e0e0e0;
-    text-align: center;
-    padding: 20px;
-    margin-top: 60px;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-}
+    h1 {
+        font-size: 36px;
+    }
 
-footer p {
-    font-size: 14px;
-    opacity: 0.8;
-    letter-spacing: 0.5px;
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hobbies-section li {
+        font-size: 20px;
+    }
 }
