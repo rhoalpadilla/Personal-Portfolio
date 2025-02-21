@@ -1,15 +1,14 @@
-
 @font-face {
     font-family: "F1";
-    src: url(Anton-Regular.ttf);
+    src: url(font/Anton-Regular.ttf);
 }
 @font-face {
     font-family: "F2";
-    src: url(Poppins-Regular.ttf);
+    src: url(font/Poppins-Regular.ttf);
 }
 @font-face {
     font-family: "F3";
-    src: url(LemonJellyPersonalUse-dEqR.ttf);
+    src: url(font/LemonJellyPersonalUse-dEqR.ttf);
 }
 
 * {
@@ -19,13 +18,12 @@
 }
 
 body {
-    font-family: F2, 'Roboto', sans-serif;
+    font-family: 'Anton-Regular', 'Roboto', sans-serif;
     background: linear-gradient(135deg, #1a2a33, #131d24);
     color: #e0e0e0;
     line-height: 1.6;
     min-height: 100vh;
 }
-
 
 header {
     background: #131d24;
@@ -64,7 +62,6 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-
 section {
     padding: 40px 20px;
     max-width: 900px;
@@ -80,7 +77,6 @@ h1 {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-
 .about-section {
     text-align: left;
 }
@@ -88,54 +84,6 @@ h1 {
 .about-section p {
     font-size: 18px;
     margin-bottom: 20px;
-}
-
-
-.hobbies-section {
-    background: #1f2b36;
-    border-radius: 10px;
-    padding: 32px;
-    margin-top: 32px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.hobbies-section li {
-    background: #2b3a47;
-    border-radius: 8px;
-    margin: 16px 0;
-    padding: 16px;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.hobbies-section li:hover {
-    background: #18df64;
-    color: #131d24;
-}
-
-
-.gallery-section {
-    background: #1f2b36;
-    border-radius: 50px;
-    padding: 180px;
-    margin-top: 16px;
-    box-shadow: 0 7px 12px rgba(0, 0, 0, 0.2);
-}
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-}
-
-.gallery-img {
-    width: calc(50% - 16px);
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 footer {
